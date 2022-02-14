@@ -1,0 +1,71 @@
+Question:
+
+I would like you to write consist of the following:
+
+A page which contains a single button centred vertically and horizontally written in React and TypeScript, 
+an array of colours (anywhere from 5 to 15) should be passed into the component. 
+On load the background of the component should be the first colour in the array and the button should be the second, 
+when the button is clicked the indexed colours should increase by 1, 
+so after the first click the background should use the second colour and the button the third, 
+on the second button click the background should use the third colour and the button the fourth and so on, 
+this should be infinite so when the end of the array is reached it should continue this process with the colours at the beginning of the array.
+
+Current Solution:
+
+Thought Processes:
+
+App Level:
+
+	- initialise functional button component 
+	- import button component to App and render it
+	- store an array of 15 colours in state
+
+Button Component Level:
+
+	State:
+	- store initial colour of button in state
+	- store current colour of button in state
+	- store initial click count in state
+	- store current click count in state
+
+	Handlers:
+
+		Button:
+
+		- write a fxn that will:
+			- take in the click event
+			- make the onClick of the button update the click counter variable and set it to current click count in state. 
+			- with each click, call another fxn that will iterate by increments of one through the array of colours in state using forEach 
+			- with each increment it should set the initial colour of the button in state 
+			- which should in turn update the current colour in state
+
+			* the initial button click count needs to be initialised to index [1]
+			* the forEach needs to be infinite and should restart when reaching the end of the array of colours
+	
+	Rendering:
+	
+	- when rendering the button:
+		- render it with props that will point to the state containing click count as well as colour
+		- these will be referenced by using JSX
+			eg. <Button color={props.currentColor} clickCount={props.currentClick}/>
+
+BackGround Level:
+
+	State:
+	- store initial colour of background in state
+	- store current colour of background in state
+	
+
+	Handlers:
+	
+	- write a fun that will:
+		- check the click count variable in state
+		- onChange of this value, it should iterate through the array of colours in state and increment by one
+		- as it iterates, it should update the initial colour of background in state, and
+		- update the current colour in state
+
+	Rendering:
+
+	- When rendering the background:
+		- render the background div with props that will point to the state variable of current colour
+		- using JSX, when rendering, the colour value will be received by checking state --> current colour 
