@@ -1,3 +1,8 @@
+# Please see the Notes.txt file. 
+
+It contains an initial mental model of how the application should be wired. It is subject to change and will be re-evaluated as my skill using TypeScript increases. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
