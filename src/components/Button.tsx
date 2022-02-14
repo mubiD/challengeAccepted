@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Button() {
 
-  const buttonHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
+  // lift state to parent to let parent know that button has been clicked
 
-    // lift state up to parent from this handler to alert the parent of the click 
+  const buttonHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
 
         console.log('clicked')
 
@@ -14,10 +14,10 @@ function Button() {
       };
 
     return(
-        <div>
+        <div className="BtnDiv">
             <button className="Button" onClick={buttonHandler}>click me</button>
         </div>
     )
-}
+};
 
 export default Button;

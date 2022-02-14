@@ -69,3 +69,6 @@ BackGround Level:
 	- When rendering the background:
 		- render the background div with props that will point to the state variable of current colour
 		- using JSX, when rendering, the colour value will be received by checking state --> current colour 
+
+		Paid: https://www.udemy.com/course/understanding-typescript/
+		Free: https://www.codecademy.com/courses/learn-typescript/lessons/introduction-to-typescript/exercises/from-javascript-to-typescript
